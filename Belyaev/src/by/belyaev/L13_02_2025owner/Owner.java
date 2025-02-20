@@ -99,8 +99,8 @@ public class Owner {
         }
     }
 
-    public static String[] getSexs() {
-        return sexs;
+    public String getSex() {
+        return sex;
     }
 
     @Override
