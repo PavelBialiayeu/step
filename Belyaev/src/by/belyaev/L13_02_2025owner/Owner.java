@@ -10,11 +10,13 @@ public class Owner {
     private String name;
     private String surName;
     private static int size;
+    private String sex;
 
     private static int totalOwners = 0;
 
     private static String[] names = new String[5];
     private static String[] surNames = new String[5];
+    private static String[] sexs = new String[2];
     static Pet[] pets = new Pet[0];
 
 
@@ -34,12 +36,16 @@ public class Owner {
         names[2] = "Олег";
         names[3] = "Оля";
         names[4] = "Коля";
+
+        sexs[0] = "мужской";
+        sexs[1] = "женский";
     }
 
     public Owner() {
         this.id = ++totalOwners;
         this.name = names[random.nextInt(names.length)];
         this.surName = surNames[random.nextInt(surNames.length)];
+        this.sex = sexs[random.nextInt(sexs.length)];
     }
 
     public int getId() {
@@ -93,13 +99,12 @@ public class Owner {
         }
     }
 
+    public static String[] getSexs() {
+        return sexs;
+    }
+
     @Override
     public String toString() {
-        return "Owner{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surName='" + surName + '\'' +
-                ", random=" + random +
-                '}';
+        return name + " " + surName + " : пол " + sex + " ";
     }
 }
