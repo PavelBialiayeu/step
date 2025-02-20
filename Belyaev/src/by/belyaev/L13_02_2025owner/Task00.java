@@ -23,6 +23,9 @@ public class Task00 {
             System.out.println();
         }
 
+        Pet pet = PetFactory.next();
+        Owner owner = OwnerFactory.next();
+
         System.out.println("Общее количество животных: " + Animal.getTotalAnimals());
         System.out.println("Общее количество владельцев: " + Owner.getTotalOwners());
 

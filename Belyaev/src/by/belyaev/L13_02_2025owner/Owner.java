@@ -105,6 +105,6 @@ public class Owner {
 
     @Override
     public String toString() {
-        return name + " " + surName + " : пол " + sex + " ";
+        return name + " " + surName + ", пол " + sex + " ";
     }
 }
