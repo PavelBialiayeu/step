@@ -29,5 +29,14 @@ public class Task00 {
             System.out.println();
         }
         System.out.println("Общее количество животных: " + Animal.getTotalAnimals());
+
+        Swimable[] swimables = new Swimable[1];
+        swimables[0] = new Bird("Кеша", "Утка", 1, "Анна");
+        for (Swimable swimable : swimables) {
+            swimable.swim();
+            if (swimable instanceof Bird bird1) {
+                bird.move();
+            }
+        }
     }
 }
