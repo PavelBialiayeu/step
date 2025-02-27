@@ -1,10 +1,8 @@
 package by.belyaev.L13_02_2025owner;
 
-import java.util.Random;
-
 public abstract class Pet extends Animal {
 
-    protected Owner owner;
+    private Owner owner;
 
     public Pet(String name, String species, int age) {
         super(name, species, age);

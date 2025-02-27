@@ -2,7 +2,9 @@ package by.belyaev.L13_02_2025owner;
 
 public class Cat extends Pet {
 
-    public Cat(String name, String species, int age) {
+    private static String species = "Кот";
+
+    public Cat(String name, int age) {
         super(name, species, age);
     }
 
@@ -23,6 +25,7 @@ public class Cat extends Pet {
 
     @Override
     public void play() {
-        System.out.println(name + " играет с хозяином " + owner);
+        System.out.println(name + " играет с хозяином " + super.getOwner());
     }
+
 }
