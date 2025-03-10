@@ -1,15 +1,18 @@
-package by.belyaev.L06_03_2025;
+package by.belyaev.L10_03_2025transport;
 
 import java.util.Objects;
 
 public abstract class Transport implements Comparable<Transport> {
     private final String model;
     private final int speed;
+    private final String licensePlate;
 
-    public Transport(String model, int speed) {
+
+    public Transport(String model, int speed, String licensePlate) {
         this.model = model;
         this.speed = speed;
-
+        this.licensePlate = licensePlate;
+        
     }
 
     public String getModel() {
@@ -20,17 +23,20 @@ public abstract class Transport implements Comparable<Transport> {
         return speed;
     }
 
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Transport transport = (Transport) o;
-        return Objects.equals(model, transport.model);
+        return Objects.equals(licensePlate, transport.licensePlate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(model);
+        return Objects.hashCode(licensePlate);
     }
 
     @Override

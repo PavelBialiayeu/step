@@ -6,23 +6,20 @@ import java.util.Random;
 
 public class TransportFactory {
 
-    private static Random random = new Random();
+    private static final Random random = new Random();
 
-    private static List<String> stringList = List.of("BMW", "Audi", "Volvo");
-    private static List<String> fuelList = List.of("Дизель", "Бензин", "Газ-бензин");
+    private final static  List<String> stringList = List.of("BMW", "Audi", "Volvo");
+    private final static  List<String> fuelType = List.of("Дизель", "Бензин", "Газ-бензин");
 
 
     public static Transport next() {
         int i = random.nextInt(3);
         if (i == 2) {
-            Bike bike = new Bike(random.nextInt(stringList), random.nextInt(330), random.nextBoolean());
-            return bike;
+            return new Bike(stringList.get(random.nextInt()), random.nextInt(330), random.nextBoolean());
         } else if (i == 1) {
-            Car car = new Car(random.nextInt(stringList), random.nextInt(270), random.nextInt());
-            return car;
+            return new Car(stringList.get(random.nextInt()), random.nextInt(270), fuelType.get(random.nextInt()));
         } else {
-            Truck truck = new Truck(random.nextInt(stringList), random.nextInt(220), random.nextInt(fuelList));
-            return truck;
+            return new Truck(stringList.get(random.nextInt()), random.nextInt(220), random.nextInt(10));
         }
     }
 }

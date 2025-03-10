@@ -1,10 +1,10 @@
-package by.belyaev.L06_03_2025;
+package by.belyaev.L10_03_2025transport;
 
 public class Car extends Transport {
     private String fuelType;
 
-    public Car(String model, int speed, String fuelType) {
-        super(model, speed);
+    public Car(String model, int speed, String licensePlate, String fuelType) {
+        super(model, speed, licensePlate);
         this.fuelType = fuelType;
     }
 

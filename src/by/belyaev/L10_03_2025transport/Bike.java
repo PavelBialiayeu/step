@@ -1,10 +1,11 @@
-package by.belyaev.L06_03_2025;
+package by.belyaev.L10_03_2025transport;
+
 
 public class Bike extends Transport {
     private final boolean hasSidecar;
 
-    public Bike(String model, int speed, boolean hasSidecar) {
-        super(model, speed);
+    public Bike(String model, int speed, String licensePlate, boolean hasSidecar) {
+        super(model, speed, licensePlate);
         this.hasSidecar = hasSidecar;
     }
 
